@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 		Slider[] sliders = FindObjectsOfType<Slider>(true);
 		foreach (Slider slider in sliders)
 		{
-			float value = PlayerPrefs.GetFloat(slider.name);
+			float value = PlayerPrefs.GetFloat(slider.name, 0f);
 			slider.value = value;
 			Debug.Log($"{slider.name} : {value}");
 		}

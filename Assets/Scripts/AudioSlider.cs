@@ -16,5 +16,6 @@ public class AudioSlider : MonoBehaviour
         Debug.Log($"SET {slider.name} : {value}");
         mixer.SetFloat(slider.name, slider.value);
         PlayerPrefs.SetFloat(slider.name, value);
+        PlayerPrefs.Save();
 	}
 }
